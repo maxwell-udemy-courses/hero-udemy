@@ -23,19 +23,21 @@
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link" href="{{ route('admin.heroes') }}">Heroes</a>
+                    <a class="nav-link" href="#">Heroes</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.items') }}">Items</a>
+                    <a class="nav-link" href="#">Items</a>
                 </li>
-
+                
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.enemies') }}">Enemigos</a>
+                    <a class="nav-link" href="#">Enemigos</a>
                 </li>
             </ul>
         </div>
     </nav>
+
+    <h1>Enemigos</h1>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
