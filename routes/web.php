@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', 'AdminController@index');
+Route::get('/admin', 'AdminController@index')->name('admin');
 Route::get('/admin/heroes', 'HeroController@index')->name('admin.heroes');
 Route::get('/admin/items', 'ItemController@index')->name('admin.items');
 Route::get('/admin/enemies', 'EnemyController@index')->name('admin.enemies');
