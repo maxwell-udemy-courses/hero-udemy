@@ -16,9 +16,11 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin'], function(){
-    Route::get('/', 'AdminController@index')->name('admin');
-    Route::get('heroes', 'HeroController@index')->name('admin.heroes');
-    Route::get('items', 'ItemController@index')->name('admin.items');
-    Route::get('enemies', 'EnemyController@index')->name('admin.enemies');
+    Route::get('/', 'AdminController@index')->name('admin.index');
+
+    Route::resource('heroes', 'HeroController');
+
+    Route::resource('item', 'ItemController');
+    Route::resource('enemy', 'EnemyController');
 });
 

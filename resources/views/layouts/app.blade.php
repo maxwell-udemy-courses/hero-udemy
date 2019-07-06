@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{{ route('admin') }}">Hero Admin</a>
+        <a class="navbar-brand" href="{{ route('admin.index') }}">Hero Admin</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -19,19 +19,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin') }}">Home</a>
+                    <a class="nav-link" href="{{ route('admin.index') }}">Home</a>
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link" href="{{ route('admin.heroes') }}">Heroes</a>
+                    <a class="nav-link" href="{{ route('heroes.index') }}">Heroes</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.items') }}">Items</a>
+                    <a class="nav-link" href="{{ route('item.index') }}">Items</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.enemies') }}">Enemigos</a>
+                    <a class="nav-link" href="{{ route('enemy.index') }}">Enemigos</a>
                 </li>
             </ul>
         </div>
