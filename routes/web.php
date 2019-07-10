@@ -22,5 +22,7 @@ Route::group(['prefix' => 'admin'], function(){
 
     Route::resource('item', 'ItemController');
     Route::resource('enemy', 'EnemyController');
+
+    Route::get('bs', 'BSController@index')->name('admin.bs');
 });
 
