@@ -12,8 +12,6 @@ class BSController extends Controller
         $hero = Hero::find(5)->first();
         $enemy = Enemy::find(2)->first();
 
-        dd($hero->level->xp);
-
         $events = [];
 
         while($hero->hp > 0 && $enemy->hp > 0){
@@ -34,8 +32,17 @@ class BSController extends Controller
                 } else {
                     $ev = [
                         "winner" => "hero",
-                        "text" => $hero->name . " acabó con la vida de " . $enemy->name
+                        "text" => $hero->name . " acabó con la vida de " . $enemy->name . " y gano " . $enemy->xp . " de experiencia."
                     ];
+
+                    $hero->xp = $hero->xp + $enemy->xp;
+
+                    if($hero->xp >= $hero->level->xp){
+                        $hero->xp = 0;
+                        $hero->level_id += 1;
+                    }
+
+                    $hero->save();
                 }
             } else {
                 $hp = $hero->def - $enemy->atq;
