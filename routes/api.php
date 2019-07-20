@@ -31,3 +31,6 @@ Route::get('enemies/{id}', 'APIController@getEnemy');
 // Endpoint de items
 Route::get('items', 'APIController@getAllItems');
 Route::get('items/{id}', 'APIController@getItem');
+
+// Endpoint de Battle System
+Route::get('bs/{heroId}/{enemyId}', 'APIController@runManualBS');

@@ -14,7 +14,7 @@ class BSController extends Controller
         return view('admin.bs.index', $this->runAutoBattle(5,2));
     }
 
-    public function runAutoBattle($heroId, $enemyId){
+    public static function runAutoBattle($heroId, $enemyId){
         $hero = Hero::find($heroId)->first();
         $enemy = Enemy::find($enemyId)->first();
 
