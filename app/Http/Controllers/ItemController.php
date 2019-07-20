@@ -86,6 +86,9 @@ class ItemController extends Controller
     {
         $item = Item::find($id);
 
+        $filePath = public_path() . '/images/items/' . $item->img_path;
+        \File::delete($filePath);
+
         $item->delete();
 
         return redirect()->route('item.index');
@@ -104,6 +107,14 @@ class ItemController extends Controller
         $item->def = $request->input('def');
         $item->luck = $request->input('luck');
         $item->cost = $request->input('cost');
+
+        if($request->hasFile('img_path')){
+            $file = $request->file('img_path');
+            $name = time() . "_" . $file->getClientOriginalName();
+            $file->move(public_path() . '/images/items', $name);
+
+            $item->img_path = $name;
+        }
         
         $item->save();
 

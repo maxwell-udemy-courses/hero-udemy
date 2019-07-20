@@ -19,6 +19,20 @@
         </div>
     </div>
 
+    <div class="row text-center text-white mt-2">
+        <div class="col-5 bg-primary">
+            <img src="{{ asset('images/heroes/' . $heroAvatar) }}" width="100" height="100">
+        </div>
+
+        <div class="col-2 bg-warning">
+            <h2>VS</h2>
+        </div>
+
+        <div class="col-5 bg-danger">
+            <img src="{{ asset('images/enemies/' . $enemyAvatar) }}" width="100" height="100">
+        </div>
+    </div>
+
     <div class="row text-center text-white mt-2 bg-info">
         <div class="col">
             <h2>Eventos de Batalla</h2>
